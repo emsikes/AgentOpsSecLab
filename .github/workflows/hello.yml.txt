@@ -1,0 +1,13 @@
+name: Hello AgentOps
+
+on: [push]
+
+jobs:
+  hello:
+    runs-on: self-hosted
+    steps:
+      - name: Confirm runner
+        run: |
+          echo "VM 500 runner is live"
+          docker version
+          curl http://localhost:5000/v2/
